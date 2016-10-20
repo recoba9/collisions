@@ -69,3 +69,21 @@ To launch spark Stream job run:
 `spark-submit --class collisions.Stream <collisions.jar> <tgt-data-dir>`
 
 where `<tgt-data-dir>` is an output files location, job is submitted for local master.
+
+##Versions and dependencies
+
+- Apache Spark 2.0.0
+
+- Kafka 2.11-0.10.0.1
+
+- Cassandra 3.8.0
+
+- Scala 2.11.8
+
+Put these jars into Spark **jars** folder:
+
+- `org.apache.spark:spark-streaming-kafka-0-10-assembly_2.11-2.0.0.jar`
+
+- `com.datastax.spark:spark-cassandra-connector_2.11-2.0.0-M3.jar`
+
+- `com.twitter:jsr166e-1.1.0.jar`
