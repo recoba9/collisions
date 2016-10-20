@@ -1,0 +1,16 @@
+spark-2.0.0-bin-hadoop2.7
+
+Load job:
+spark-submit --class collisions.Load --master spark://localhost C:\Users\Rostislav\IdeaProjects\collisions\out\artifacts\collisions_jar\collisions.jar D:\collisions_test\report_in
+
+
+Report job:
+spark-submit --class collisions.Report  --master spark://localhost C:\Users\Rostislav\IdeaProjects\collisions\out\artifacts\collisions_jar\collisions.jar monthly D:\collisions_test\report_out
+
+spark-submit --class collisions.Report  --master spark://localhost C:\Users\Rostislav\IdeaProjects\collisions\out\artifacts\collisions_jar\collisions.jar season D:\collisions_test\report_out
+
+spark-submit --class collisions.Report  --master spark://localhost C:\Users\Rostislav\IdeaProjects\collisions\out\artifacts\collisions_jar\collisions.jar day-night D:\collisions_test\report_out
+
+
+Stream job:
+spark-submit --class collisions.Stream  --master spark://localhost C:\Users\Rostislav\IdeaProjects\collisions\out\artifacts\collisions_jar\collisions.jar D:\collisions_test\stream_out\collision

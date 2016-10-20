@@ -1,0 +1,9 @@
+kafka_2.11-0.10.0.1
+
+bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+
+bin\windows\kafka-server-start.bat config\server.properties
+
+bin\windows\connect-standalone.bat config\connect-standalone-collisions.properties config\connect-file-source-collisions.properties config\connect-file-sink-collisions.properties
+
+bin\windows\kafka-console-consumer.bat --zookeeper localhost:2181 --topic collisions-topic --from-beginning
